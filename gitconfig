@@ -13,7 +13,7 @@
 [rerere]
 	enabled = true
 [core]
-	excludesfile = /Users/thegeorgeous/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [commit]
         template = ~/.gitmessage
 [url "git@github.com:thegeorgeous/"]
