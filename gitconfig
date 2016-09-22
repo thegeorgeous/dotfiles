@@ -1,0 +1,26 @@
+[user]
+	name = George Thomas
+	email = iamgeorgethomas@gmail.com
+[pull]
+	rebase = true
+[push]
+	default = current
+[rebase]
+        autosquash = true
+        autostash = true
+[github]
+	user = thegeorgeous
+[rerere]
+	enabled = true
+[core]
+	excludesfile = /Users/thegeorgeous/.gitignore_global
+[commit]
+        template = ~/.gitmessage
+[url "git@github.com:thegeorgeous/"]
+	insteadOf = gh:thegeorgeous/
+[url "git@github.com:bangthetable/"]
+	insteadOf = gh:btt/
+[url "git@bitbucket.com:thegeorgeous/"]
+	insteadOf = bb:thegeorgeous/
+[color]
+	ui = true
