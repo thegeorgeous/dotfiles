@@ -33,5 +33,11 @@ alias pgsr="postgres -D /usr/local/var/postgres"
 v(){
     vagrant $1;
 }
+
+# path for rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# path for go
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+
