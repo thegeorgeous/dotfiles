@@ -34,6 +34,9 @@ v(){
     vagrant $1;
 }
 
+# path for ctags
+export PATH="/usr/local/bin:$PATH"
+
 # path for rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
