@@ -29,6 +29,7 @@ export LANG=en_US.UTF-8
 
 export TERM=xterm-256color
 alias pgsr="postgres -D /usr/local/var/postgres"
+alias let_there_be_light="~/Applications/led-backlight-cmstorm"
 
 v(){
     vagrant $1;
