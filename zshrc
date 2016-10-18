@@ -28,8 +28,8 @@ export LANG=en_US.UTF-8
 . `brew --prefix`/etc/profile.d/z.sh
 
 export TERM=xterm-256color
-alias pgsr="postgres -D /usr/local/var/postgres"
 alias let_there_be_light="~/Applications/led-backlight-cmstorm"
+alias reload="source ~/.zshrc"
 
 v(){
     vagrant $1;
