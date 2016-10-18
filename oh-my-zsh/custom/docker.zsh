@@ -1,5 +1,5 @@
 # aliases
-alias dcup="COMPOSE_HTTP_TIMEOUT=10000 docker-compose up"
+alias dcup="COMPOSE_HTTP_TIMEOUT=10000 docker-compose up -d"
 alias drmi='docker rmi $(docker images --filter "dangling=true" -q --no-trunc)'
 alias drmc='docker rm $(docker ps -qa --no-trunc --filter "status=exited")'
 alias drmv='docker volume rm $(docker volume ls -q -f "dangling=true")'
