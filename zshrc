@@ -6,7 +6,8 @@ ZSH_THEME="agnoster"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+DISABLE_UNTRACKED_FILES_DIRTY="true"
+
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
@@ -30,7 +31,7 @@ export LANG=en_US.UTF-8
 export TERM=xterm-256color
 alias let_there_be_light="~/Applications/led-backlight-cmstorm"
 alias reload="source ~/.zshrc"
-
+alias ec="emacsclient -n"
 v(){
     vagrant $1;
 }
@@ -44,4 +45,3 @@ eval "$(rbenv init -)"
 
 # path for go
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
-
