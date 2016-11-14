@@ -11,7 +11,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git bundler rails zeus brew)
+plugins=(git bundler rails brew)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -35,6 +35,7 @@ alias ec="emacsclient -n"
 v(){
     vagrant $1;
 }
+
 
 # path for ctags
 export PATH="/usr/local/bin:$PATH"
