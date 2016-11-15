@@ -32,10 +32,6 @@ export TERM=xterm-256color
 alias let_there_be_light="~/Applications/led-backlight-cmstorm"
 alias reload="source ~/.zshrc"
 alias ec="emacsclient -n"
-v(){
-    vagrant $1;
-}
-
 
 # path for ctags
 export PATH="/usr/local/bin:$PATH"
@@ -44,5 +40,3 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-# path for go
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
