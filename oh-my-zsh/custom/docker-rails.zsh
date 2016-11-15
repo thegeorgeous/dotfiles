@@ -8,11 +8,13 @@ alias dcl="COMPOSE_HTTP_TIMEOUT=10000 docker-compose logs -f"
 alias dcr="docker-compose restart"
 alias dcs="docker-compose stop"
 alias dexit="docker exec -it"
+alias dcp="docker-compose pull"
+alias dcpb="docker-compose pull && docker-compose build"
 
 # Helper functions for using docker with rails
 drc() {
-    [ $# -eq 0 ] && { echo "\nUsage: $0 app_container_name\n"; return 1; }
-    docker exec -it $1 bundle exec rails c;
+    [ $# -eq 0 ] && { echo "\nUsage: $0 app_container_name [-s]\n"; return 1; }
+    docker exec -it $1 bundle exec rails c $2;
 }
 
 dspec() {
