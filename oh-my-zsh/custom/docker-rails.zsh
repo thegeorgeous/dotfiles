@@ -28,7 +28,8 @@ ddlog() {
 }
 
 ddb() {
-    docker exec -it $1 mysql $3 $4 $5;
+    [ $# -eq 0 ] && { echo "\nUsage: $0 app_container_name mysql -u user_name -p\n"; return 1; }
+    docker exec -it $1 mysql $2 $3 $4;
 }
 
 dbash() {
