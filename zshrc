@@ -20,18 +20,14 @@ export LANG=en_US.UTF-8
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
 . `brew --prefix`/etc/profile.d/z.sh
 
 export TERM=xterm-256color
 alias let_there_be_light="~/Applications/led-backlight-cmstorm"
 alias reload="source ~/.zshrc"
 alias ec="emacsclient -n"
+alias reinstall_emacs="brew uninstall emacs && brew install emacs --HEAD --with-cocoa"
+alias blog_up="docker run -v /Users/thegeorgeous/projects/thegeorgeous.github.io:/app --rm -p 80:80 thegeorgeous/blog jekyll serve --host 0.0.0.0 --port 80"
 
 # path for ctags
 export PATH="/usr/local/bin:$PATH"
