@@ -1,10 +1,12 @@
+[include]
+        path = ~/private/.gitconfig
 [user]
-	name = George Thomas
-	email = iamgeorgethomas@gmail.com
+        name = George Thomas
+        email = iamgeorgethomas@gmail.com
 [pull]
-	rebase = true
+        rebase = true
 [push]
-	default = current
+        default = current
 [rebase]
         autosquash = true
         autostash = true
@@ -16,6 +18,7 @@
 	excludesfile = ~/.gitignore_global
 [commit]
         template = ~/.gitmessage
+	gpgSign = true
 [url "git@github.com:thegeorgeous/"]
 	insteadOf = gh:thegeorgeous/
 [url "git@github.com:bangthetable/"]
