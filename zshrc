@@ -36,3 +36,8 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+# path for elixir
+export PATH="$PATH:/path/to/elixir/bin"
+
+# path for go
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
