@@ -10,6 +10,8 @@ alias dcs="docker-compose stop"
 alias dexit="docker exec -it"
 alias dcp="docker-compose pull"
 alias dcpb="docker-compose pull && docker-compose build"
+alias dsp="docker system prune"
+alias dsdf='docker system df'
 
 # Helper functions for using docker with rails
 drc() {
