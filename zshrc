@@ -41,3 +41,18 @@ export PATH="$PATH:/path/to/elixir/bin"
 
 # path for go
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export PATH="/usr/local/opt/node@6/bin:$PATH"
+
+codeclimate() {
+docker run \
+  --interactive --tty --rm \
+  --env CODECLIMATE_CODE="$PWD" \
+  --volume "$PWD":/code \
+  --volume /var/run/docker.sock:/var/run/docker.sock \
+  --volume /tmp/cc:/tmp/cc \
+  codeclimate/codeclimate $1 $2 $3
+}
+
+export PATH="/usr/local/sbin:$PATH"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

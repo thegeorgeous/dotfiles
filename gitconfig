@@ -1,23 +1,24 @@
 [include]
-        path = ~/private/.gitconfig
+  path = ~/private/.gitconfig
 [user]
-        name = George Thomas
-        email = iamgeorgethomas@gmail.com
+  name = George Thomas
+  email = iamgeorgethomas@gmail.com
 [pull]
-        rebase = true
+  rebase = true
 [push]
-        default = current
+  default = current
 [rebase]
-        autosquash = true
-        autostash = true
+  autosquash = true
+  autostash = true
 [github]
 	user = thegeorgeous
 [rerere]
 	enabled = true
 [core]
 	excludesfile = ~/.gitignore_global
+	autocrlf = input
 [commit]
-        template = ~/.gitmessage
+  template = ~/.gitmessage
 	gpgSign = true
 [url "git@github.com:thegeorgeous/"]
 	insteadOf = gh:thegeorgeous/
@@ -27,3 +28,7 @@
 	insteadOf = bb:thegeorgeous/
 [color]
 	ui = true
+[http]
+	postBuffer = 1048576000
+[gpg]
+	program = /usr/local/bin/gpg2
