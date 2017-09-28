@@ -15,6 +15,9 @@
 ehthumbs.db
 Thumbs.db
 
+*.sublime-workspace
+*.sublime-project
+
 TAGS
 
 rails_best_practices_output.html
