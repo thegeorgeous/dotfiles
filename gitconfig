@@ -1,8 +1,8 @@
 [include]
   path = ~/private/.gitconfig
 [user]
-  name = George Thomas
-  email = iamgeorgethomas@gmail.com
+	name = George Thomas
+	email = iamgeorgethomas@gmail.com
 [pull]
   rebase = true
 [push]
@@ -19,7 +19,7 @@
 	autocrlf = input
 [commit]
   template = ~/.gitmessage
-	gpgSign = true
+	gpgsign = true
 [url "git@github.com:thegeorgeous/"]
 	insteadOf = gh:thegeorgeous/
 [url "git@github.com:bangthetable/"]
@@ -32,3 +32,10 @@
 	postBuffer = 1048576000
 [gpg]
 	program = /usr/local/bin/gpg2
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[gui]
+	recentrepo = /Users/thegeorgeous/src/btt/ehq/participation
