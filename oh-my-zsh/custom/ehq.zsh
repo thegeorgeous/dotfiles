@@ -6,5 +6,9 @@ reporting=ehq_reporting.unicorn_1
 db=ehq_db_1
 
 phq(){
-   COMPOSE_HTTP_TIMEOUT=10000 docker-compose -f docker-compose.yml -f modportal/docker-compose.yml $1;
+    COMPOSE_HTTP_TIMEOUT=10000 docker-compose -f docker-compose.yml -f modportal/docker-compose.yml $1;
+}
+
+ehq(){
+    COMPOSE_HTTP_TIMEOUT=10000 docker-compose -f docker-compose.yml $1;
 }
