@@ -17,12 +17,12 @@ alias dps='docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Runn
 # Helper functions for using docker with rails
 drc() {
     [ $# -eq 0 ] && { echo "\nUsage: $0 app_container_name [-s]\n"; return 1; }
-    docker exec -it $1 bundle exec rails c $2;
+    docker exec -it $1 bin/rails c $2;
 }
 
 dspec() {
     [ $# -eq 0 ] && { echo "\nUsage: $0 app_container_name file_name\n"; return 1; }
-    docker exec -it $1 rspec --color $2 --format documentation;
+    docker exec -it $1 bin/rspec --color $2 --format documentation;
 }
 
 ddlog() {
@@ -38,4 +38,8 @@ ddb() {
 dbash() {
     [ $# -eq 0 ] && { echo "\nUsage: $0 app_container_name\n"; return 1; }
     docker exec -it $1 /bin/bash;
+}
+
+dbinstall(){
+    docker exec -it $1 bin/bundle install --gemfile=$2;
 }
