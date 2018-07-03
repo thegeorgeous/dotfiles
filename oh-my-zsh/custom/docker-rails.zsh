@@ -8,7 +8,7 @@ alias dcl="COMPOSE_HTTP_TIMEOUT=10000 docker-compose logs -f"
 alias dcr="docker-compose restart"
 alias dcs="docker-compose stop"
 alias dexit="docker exec -it"
-alias dcp="docker-compose pull"
+alias dcp="docker-compose pull --no-parallel"
 alias dcpb="docker-compose pull && docker-compose build"
 alias dsp="docker system prune"
 alias dsdf='docker system df'
