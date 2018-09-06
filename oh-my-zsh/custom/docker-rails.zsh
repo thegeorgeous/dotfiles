@@ -13,6 +13,7 @@ alias dcpb="docker-compose pull && docker-compose build"
 alias dsp="docker system prune"
 alias dsdf='docker system df'
 alias dps='docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.RunningFor}}\t{{.Status}}"'
+alias dcstart="docker-compose start"
 
 # Helper functions for using docker with rails
 drc() {
