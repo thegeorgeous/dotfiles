@@ -30,8 +30,7 @@
 	ui = true
 [http]
 	postBuffer = 1048576000
-[gpg]
-	program = /usr/local/bin/gpg2
+
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f

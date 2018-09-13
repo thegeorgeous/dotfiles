@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/thegeorgeous/.oh-my-zsh
+export ZSH=/Users/georgethomas/.oh-my-zsh
 
 ZSH_THEME="robbyrussell"
 
@@ -11,7 +11,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git bundler rails brew docker)
+plugins=(git bundler rails docker)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -19,7 +19,7 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 . `brew --prefix`/etc/profile.d/z.sh
 
@@ -51,3 +51,4 @@ git_maintain() {
     git pull
 }
 export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
+export PATH="/usr/local/opt/mysql@5.5/bin:$PATH"
