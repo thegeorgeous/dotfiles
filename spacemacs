@@ -317,7 +317,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
   (add-hook 'enh-ruby-mode-hook (lambda () (flycheck-disable-checker 'ruby-reek)))
   (add-hook 'prog-mode-hook 'fci-mode)
-  (add-hook 'enh-ruby-mode-hook robe-mode)
+  (add-hook 'enh-ruby-mode-hook 'robe-mode)
   )
 
 (defun dotspacemacs/user-config ()
@@ -349,19 +349,3 @@ you should place your code here."
   (eval-after-load 'company
     '(push 'company-robe company-backends))
 )
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(ansi-color-names-vector
-   ["#0a0814" "#f2241f" "#67b11d" "#b1951d" "#4f97d7" "#a31db1" "#28def0" "#b2b2b2"])
- '(package-selected-packages
-   (quote
-    (evil-escape evil-args org-plus-contrib dash helm sql-indent rake inflections org-category-capture alert log4e gntp mmm-mode markdown-mode skewer-mode simple-httpd multiple-cursors js2-mode haml-mode gitignore-mode pos-tip flycheck evil-magit magit git-commit ghub with-editor json-mode tablist magit-popup docker-tramp json-snatcher json-reformat csv-mode web-completion-data dash-functional tern company inf-ruby yasnippet anaconda-mode pythonic auto-complete paradox evil goto-chg yapfify yaml-mode ws-butler winum which-key web-mode web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package unfill toc-org tagedit spaceline smeargle smartparens slim-mode scss-mode sass-mode rvm ruby-tools ruby-test-mode rubocop rspec-mode robe restart-emacs rbenv rainbow-delimiters railscasts-reloaded-theme pyvenv pytest pyenv-mode py-isort pug-mode projectile-rails popwin pip-requirements persp-mode orgit org-projectile org-present org-pomodoro org-mime org-download org-bullets open-junk-file nginx-mode neotree mwim move-text minitest markdown-toc magit-gitflow macrostep lorem-ipsum livid-mode live-py-mode linum-relative link-hint js2-refactor js-doc indent-guide hydra hy-mode hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-pydoc helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gnuplot gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md fuzzy flycheck-pos-tip flx-ido fill-column-indicator feature-mode fancy-battery eyebrowse expand-region exec-path-from-shell evil-unimpaired evil-search-highlight-persist evil-numbers evil-nerd-commenter eval-sexp-fu enh-ruby-mode emmet-mode elisp-slime-nav dumb-jump dockerfile-mode docker diminish define-word cython-mode company-web company-tern company-statistics company-anaconda column-enforce-mode coffee-mode clean-aindent-mode chruby bundler bind-map auto-yasnippet auto-highlight-symbol auto-compile aggressive-indent ace-window ace-link ace-jump-helm-line ac-ispell))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:foreground "#E6E1DC" :background "#232323")))))
