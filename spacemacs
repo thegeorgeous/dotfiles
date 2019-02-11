@@ -68,7 +68,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(forge)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -327,10 +327,10 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  (setq powerline-default-separator 'wave)
+  (setq powerline-default-separator 'arrow)
   (setq large-file-warning-threshold 100000000)
   (with-eval-after-load 'org (setq org-agenda-files
-                                   '("~/org/")) (setq org-default-notes-file "~/org/bangthetable-tasks.org") )
+                                   '("~/org/")) (setq org-default-notes-file "~/org/quintype-tasks.org") )
   (setq require-final-newline t)
   (setq tab-always-indent t)
   (setq auth-sources '((:source "~/.authinfo")))
@@ -348,4 +348,5 @@ you should place your code here."
   (global-company-mode)
   (eval-after-load 'company
     '(push 'company-robe company-backends))
+  (require 'forge)
 )
