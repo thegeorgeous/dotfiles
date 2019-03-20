@@ -22,10 +22,8 @@
 	gpgsign = true
 [url "git@github.com:thegeorgeous/"]
 	insteadOf = gh:thegeorgeous/
-[url "git@github.com:bangthetable/"]
-	insteadOf = gh:btt/
-[url "git@bitbucket.com:thegeorgeous/"]
-	insteadOf = bb:thegeorgeous/
+[url "git@github.com:quintype/"]
+	insteadOf = gh:qt/
 [color]
 	ui = true
 [http]

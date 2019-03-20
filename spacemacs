@@ -30,7 +30,8 @@ values."
    dotspacemacs-configuration-layer-path '()
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(
+   '(clojure
+     rust
      python
      csv
      sql
@@ -68,7 +69,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(forge)
+   dotspacemacs-additional-packages '(forge spacemacs-theme atom-one-dark-theme)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -142,13 +143,14 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(railscasts-reloaded
-                         zenburn)
+                         spacemacs-light
+                         atom-one-dark)
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("Source Code Pro"
-                               :size 14
+   dotspacemacs-default-font '("Inconsolata"
+                               :size 16
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -318,6 +320,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
   (add-hook 'enh-ruby-mode-hook (lambda () (flycheck-disable-checker 'ruby-reek)))
   (add-hook 'prog-mode-hook 'fci-mode)
   (add-hook 'enh-ruby-mode-hook 'robe-mode)
+  (server-start)
   )
 
 (defun dotspacemacs/user-config ()
@@ -334,10 +337,10 @@ you should place your code here."
   (setq require-final-newline t)
   (setq tab-always-indent t)
   (setq auth-sources '((:source "~/.authinfo")))
-  (setq fci-rule-color '"#383838")
   (spacemacs/set-leader-keys "ot" 'projectile-run-term)
   (setq-default
    ;; js2-mode
+   js-indent-level 2
    js2-basic-offset 2
    ;; web-mode
    css-indent-offset 2
