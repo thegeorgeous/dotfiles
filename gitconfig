@@ -11,28 +11,28 @@
   autosquash = true
   autostash = true
 [github]
-	user = thegeorgeous
+  user = thegeorgeous
 [rerere]
-	enabled = true
+  enabled = true
 [core]
-	excludesfile = ~/.gitignore_global
-	autocrlf = input
+  excludesfile = ~/.gitignore_global
+  autocrlf = input
 [commit]
   template = ~/.gitmessage
-	gpgsign = true
+  gpgsign = true
 [url "git@github.com:thegeorgeous/"]
-	insteadOf = gh:thegeorgeous/
+  insteadOf = gh:thegeorgeous/
 [url "git@github.com:quintype/"]
-	insteadOf = gh:qt/
+  insteadOf = gh:qt/
 [color]
-	ui = true
+  ui = true
 [http]
-	postBuffer = 1048576000
+  postBuffer = 1048576000
 
 [filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-[gui]
-	recentrepo = /Users/thegeorgeous/src/btt/ehq/participation
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+[gpg]
+  program = /usr/local/MacGPG2/bin/gpg

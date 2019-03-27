@@ -18,6 +18,8 @@ Thumbs.db
 *.sublime-workspace
 *.sublime-project
 
+.tern-port
+
 TAGS
 
 rails_best_practices_output.html
