@@ -1,8 +1,8 @@
 [include]
   path = ~/private/.gitconfig
 [user]
-	name = George Thomas
-	email = iamgeorgethomas@gmail.com
+  name = George Thomas
+  email = george.thomas@quintype.com
 [pull]
   rebase = true
 [push]
@@ -20,6 +20,8 @@
 [commit]
   template = ~/.gitmessage
   gpgsign = true
+[url "git@github.com"]
+	insteadOf = gh
 [url "git@github.com:thegeorgeous/"]
   insteadOf = gh:thegeorgeous/
 [url "git@github.com:quintype/"]

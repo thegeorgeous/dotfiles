@@ -18,7 +18,13 @@ Thumbs.db
 *.sublime-workspace
 *.sublime-project
 
+*.code-workspace
+.vscode
+
 .tern-port
+.dir-locals.el
+
+.solargraph.yml
 
 TAGS
 

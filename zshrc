@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/georgethomas/.oh-my-zsh
+export ZSH=/Users/george.thomas/.oh-my-zsh
 
 ZSH_THEME="robbyrussell"
 
@@ -11,7 +11,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git bundler rails docker)
+plugins=(git bundler rails docker kubectl)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -21,14 +21,12 @@ export LANG=en_US.UTF-8
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-. `brew --prefix`/etc/profile.d/z.sh
-
+#. `brew --prefix`/etc/profile.d/z.sh
+export GPG_TTY=$(tty)
 export TERM=xterm-256color
 alias reload="source ~/.zshrc"
 alias ec="emacsclient -n"
-alias vim=nvim
-
-export PATH="$HOME/.bin:$PATH"
+alias bubu="brew update && brew upgrade && brew outdated && brew cleanup"
 
 # path for ctags
 export PATH="/usr/local/bin:$PATH"
@@ -42,7 +40,6 @@ export GOPATH=$HOME/src/btt/go
 export PATH="/usr/local/sbin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export PATH="/usr/local/opt/mysql@5.5/bin:$PATH"
 
 git_maintain() {
     git stash
@@ -52,3 +49,9 @@ git_maintain() {
 }
 export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.5/bin:$PATH"
+unsetopt nomatch
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/"
+export PATH="/usr/local/opt/postgresql@9.6/bin:/usr/local/opt/node@10/bin:$PATH"
