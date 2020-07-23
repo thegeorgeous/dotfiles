@@ -59,3 +59,4 @@ set backspace=indent,eol,start
 set rtp+=/usr/local/opt/fzf
 syntax on
 colorscheme railscasts
+set clipboard=unnamed

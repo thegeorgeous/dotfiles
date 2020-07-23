@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/george.thomas/.oh-my-zsh
+export ZSH=/Users/thegeorgeous/.oh-my-zsh
 
 ZSH_THEME="robbyrussell"
 
@@ -51,12 +51,11 @@ unsetopt nomatch
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # heroku autocomplete setup
 HEROKU_AC_ZSH_SETUP_PATH=/Users/thegeorgeous/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
-export PATH="/usr/local/opt/postgresql@10/bin:$PATH"
+export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
 export PATH="/usr/local/opt/node@12/bin:$PATH"
 export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
 export PKG_CONFIG_PATH="/usr/local/opt/icu4c/lib/pkgconfig:$PKG_CONFIG_PATH"
@@ -66,3 +65,6 @@ export MAVEN_REPO_USER=squareshift-dev
 export MAVEN_REPO_PASS=squareshift123
 export PATH="/usr/local/smlnj/bin:$PATH"
 export PATH="$HOME/apache-maven-3.6.3/bin:$PATH"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk-11.jdk/Contents/Home"
+export PATH="/usr/local/opt/postgresql@11/bin:/usr/local/opt/node@12/bin:$PATH"
+export PKG_CONFIG_PATH="/usr/local/opt/icu4c/lib/pkgconfig:$PKG_CONFIG_PATH"

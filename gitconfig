@@ -2,7 +2,7 @@
   path = ~/private/.gitconfig
 [user]
   name = George Thomas
-  email = george.thomas@quintype.com
+  email = george@codemancers.com
 [pull]
   rebase = true
 [push]
@@ -24,8 +24,10 @@
 	insteadOf = gh
 [url "git@github.com:thegeorgeous/"]
   insteadOf = gh:thegeorgeous/
-[url "git@github.com:quintype/"]
-  insteadOf = gh:qt/
+[url "git@gitlab.com:thegeorgeous/"]
+  insteadOf = gl:thegeorgeous/
+[url "git@github.com:code-mancers/"]
+  insteadOf = gh:cm/
 [color]
   ui = true
 [http]

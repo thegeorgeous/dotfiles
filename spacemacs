@@ -148,7 +148,8 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(railscasts-reloaded)
+   dotspacemacs-themes '(doom-spacegrey
+                         railscasts-reloaded)
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
@@ -337,10 +338,27 @@ you should place your code here."
   (setq powerline-default-separator 'wave)
   (setq large-file-warning-threshold 100000000)
   (with-eval-after-load 'org (setq org-agenda-files
-                                   '("~/org/")) (setq org-default-notes-file "~/org/quintype-tasks.org") )
+                                   '("~/org/")) (setq org-default-notes-file "~/org/projects.org") )
+  (setq org-todo-keywords
+        '((sequence
+           "TODO(t)"  ; A task that needs doing & is ready to do
+           "PROJ(p)"  ; A project, which usually contains other tasks
+           "STRT(s)"  ; A task that is in progress
+           "WAIT(w)"  ; Something external is holding up this task
+           "HOLD(h)"  ; This task is paused/on hold because of me
+           "|"
+           "DONE(d)"  ; Task successfully completed
+           "KILL(k)") ; Task was cancelled, aborted or is no longer applicable
+          (sequence
+           "[ ](T)"   ; A task that needs doing
+           "[-](S)"   ; Task is in progress
+           "[?](W)"   ; Task is being held up or paused
+           "|"
+           "[X](D)")) ; Task was completed
+        )
   (setq require-final-newline t)
   (setq tab-always-indent t)
-  (setq auth-sources '((:source "~/.authinfo")))
+  (setq auth-sources '((:source "~/.netrc")))
   (spacemacs/set-leader-keys "ot" 'projectile-run-term)
 
   (setq-default
@@ -376,25 +394,10 @@ you should place your code here."
   (spaceline-toggle-org-clock-on)
   (setq forge-topic-list-limit '(60 . 0))
   (remove-hook 'find-file-hooks 'vc-find-file-hook)
+  (setq c-basic-offset 2)
   (setq meghnada-maven-path "mvn -s.m2/settings.xml")
+  (add-hook 'before-save-hook 'meghanada-code-beautify-before-save)
 )
 (defun dotspacemacs/emacs-custom-settings ()
-  "Emacs custom settings.
-This is an auto-generated function, do not modify its content directly, use
-Emacs customize menu instead.
-This function is called at the very end of Spacemacs initialization."
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (ob-sml sml-mode yasnippet-snippets yapfify yaml-mode ws-butler writeroom-mode winum which-key web-mode web-beautify volatile-highlights vimrc-mode vi-tilde-fringe uuidgen use-package unfill treemacs-projectile treemacs-persp treemacs-magit treemacs-evil toml-mode toc-org tide tagedit symon symbol-overlay string-inflection sql-indent spaceline-all-the-icons smeargle slim-mode seeing-is-believing scss-mode sass-mode rvm ruby-tools ruby-test-mode ruby-refactor ruby-hash-syntax rubocopfmt rubocop rspec-mode robe rjsx-mode restart-emacs rbenv rainbow-delimiters railscasts-reloaded-theme racer pytest pyenv-mode py-isort pug-mode projectile-rails prettier-js popwin pippel pipenv pip-requirements password-generator paradox overseer orgit org-projectile org-present org-pomodoro org-mime org-download org-cliplink org-bullets org-brain open-junk-file nodejs-repl nginx-mode nameless mwim move-text mmm-mode minitest markdown-toc magit-svn magit-section magit-gitflow macrostep lorem-ipsum livid-mode live-py-mode link-hint json-navigator js2-refactor js-doc indent-guide importmagic impatient-mode hybrid-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-xref helm-themes helm-swoop helm-pydoc helm-purpose helm-projectile helm-org-rifle helm-org helm-mode-manager helm-make helm-ls-git helm-gitignore helm-git-grep helm-flx helm-descbinds helm-dash helm-css-scss helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gnuplot gitignore-templates gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md fuzzy forge font-lock+ flycheck-rust flycheck-pos-tip flycheck-package flycheck-elsa flx-ido fill-column-indicator feature-mode fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-org evil-numbers evil-nerd-commenter evil-matchit evil-magit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-cleverparens evil-args evil-anzu enh-ruby-mode emmet-mode elisp-slime-nav editorconfig dumb-jump dotenv-mode dockerfile-mode docker diminish devdocs define-word dash-at-point dactyl-mode cython-mode csv-mode company-web company-tern company-anaconda column-enforce-mode clojure-snippets clean-aindent-mode cider-eval-sexp-fu cider chruby centered-cursor-mode cargo bundler blacken auto-yasnippet auto-highlight-symbol auto-compile aggressive-indent ace-link ace-jump-helm-line ac-ispell))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+  "Emacs custom settings"
 )
