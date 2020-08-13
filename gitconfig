@@ -20,14 +20,10 @@
 [commit]
   template = ~/.gitmessage
   gpgsign = true
-[url "git@github.com"]
-	insteadOf = gh
-[url "git@github.com:thegeorgeous/"]
-  insteadOf = gh:thegeorgeous/
+[url "git@github.com:"]
+	insteadOf = gh:
 [url "git@gitlab.com:thegeorgeous/"]
   insteadOf = gl:thegeorgeous/
-[url "git@github.com:code-mancers/"]
-  insteadOf = gh:cm/
 [color]
   ui = true
 [http]
