@@ -53,4 +53,8 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+;; Toggle fullscreen on start
 (toggle-frame-fullscreen)
+
+;; Show the fill column indicator when writing code
+(add-hook! (text-mode prog-mode conf-mode) 'display-fill-column-indicator-mode)
