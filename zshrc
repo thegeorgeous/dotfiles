@@ -68,7 +68,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git bundler rails docker kubectl)
+plugins=(git bundler rails docker kubectl python)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -104,6 +104,7 @@ export PKG_CONFIG_PATH="/usr/local/opt/icu4c/lib/pkgconfig:$PKG_CONFIG_PATH"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+export EDITOR='vim'
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
@@ -126,7 +127,15 @@ alias reload="source ~/.zshrc"
 alias ec="emacsclient -n"
 alias bubu="brew update && brew upgrade && brew outdated && brew cleanup"
 alias sml="rlwrap sml"
+alias python="python3"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
+export PATH="$HOME/Workspace/apache-maven-3.6.3/bin:$PATH"
+
+export LDFLAGS="-L/usr/local/opt/libffi/lib"
+export CPPFLAGS="-I/usr/local/opt/libffi/include"
+export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
+export PATH="/usr/local/opt/libpq/bin:$PATH"
