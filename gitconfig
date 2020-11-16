@@ -1,8 +1,8 @@
 [include]
   path = ~/private/.gitconfig
 [user]
-  name = George Thomas
-  email = george@codemancers.com
+	name = George Thomas
+	email = iamgeorgethomas@gmail.com
 [pull]
   rebase = true
 [push]
