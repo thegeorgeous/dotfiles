@@ -126,12 +126,16 @@ export EDITOR='vim'
 alias reload="source ~/.zshrc"
 alias ec="emacsclient -n"
 alias bubu="brew update && brew upgrade && brew outdated && brew cleanup"
-alias sml="rlwrap sml"
-alias python="python3"
 
+# Standard ML
+alias sml="rlwrap sml"
+
+# node
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# java
 export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
 export PATH="$HOME/Workspace/apache-maven-3.6.3/bin:$PATH"
 
@@ -139,3 +143,15 @@ export LDFLAGS="-L/usr/local/opt/libffi/lib"
 export CPPFLAGS="-I/usr/local/opt/libffi/include"
 export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
 export PATH="/usr/local/opt/libpq/bin:$PATH"
+
+export MAVEN_REPO_USER="squareshift-dev"
+export MAVEN_REPO_PASS="squareshift123"
+
+# go
+export GOPATH=$HOME/Workspace/go-workspace # don't forget to change your path correctly!
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
+ 
+# elixir
+export PATH="$PATH:/path/to/elixir/bin"

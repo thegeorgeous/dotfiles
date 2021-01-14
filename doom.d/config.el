@@ -56,5 +56,34 @@
 ;; Toggle fullscreen on start
 (toggle-frame-fullscreen)
 
+(setq lsp-file-watch-ignored `("[/\\\\]\\.git\\'"
+                               "[/\\\\]\\.hg\\'"
+                               "[/\\\\]\\.bzr\\'"
+                               "[/\\\\]_darcs\\'"
+                               "[/\\\\]\\.svn\\'"
+                               "[/\\\\]_FOSSIL_\\'"
+                               "[/\\\\]\\.idea\\'"
+                               "[/\\\\]\\.ensime_cache\\'"
+                               "[/\\\\]\\.eunit\\'"
+                               "[/\\\\]node_modules"
+                               "[/\\\\]\\.fslckout\\'"
+                               "[/\\\\]\\.tox\\'"
+                               "[/\\\\]dist\\'"
+                               "[/\\\\]dist-newstyle\\'"
+                               "[/\\\\]\\.stack-work\\'"
+                               "[/\\\\]\\.bloop\\'"
+                               "[/\\\\]\\.metals\\'"
+                               "[/\\\\]target\\'"
+                               "[/\\\\]\\.ccls-cache\\'"
+                               "[/\\\\]\\.vscode\\'"
+                               "[/\\\\]\\.deps\\'"
+                               "[/\\\\]build-aux\\'"
+                               "[/\\\\]autom4te.cache\\'"
+                               "[/\\\\]\\.reference\\'"
+                               "[/\\\\]bin/Debug\\'"
+                               "[/\\\\]obj\\'"
+                               "[/\\\\]\\.m2/repository\\"))
 ;; Show the fill column indicator when writing code
 (add-hook! (text-mode prog-mode conf-mode) 'display-fill-column-indicator-mode)
+(setq doom-modeline-env-ruby-executable "Users/thegeorgeous/.rbenv/shims/ruby")
+(setq flycheck-ruby-executable "Users/thegeorgeous/.rbenv/shims/ruby")
