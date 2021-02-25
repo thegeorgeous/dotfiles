@@ -87,3 +87,5 @@
 (add-hook! (text-mode prog-mode conf-mode) 'display-fill-column-indicator-mode)
 (setq doom-modeline-env-ruby-executable "Users/thegeorgeous/.rbenv/shims/ruby")
 (setq flycheck-ruby-executable "Users/thegeorgeous/.rbenv/shims/ruby")
+
+(setq-default line-spacing 0.3)

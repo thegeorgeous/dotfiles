@@ -155,3 +155,7 @@ export PATH=$PATH:$GOROOT/bin
  
 # elixir
 export PATH="$PATH:/path/to/elixir/bin"
+
+# google-cloud-sdk
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+    source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
