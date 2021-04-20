@@ -30,4 +30,4 @@ rails_best_practices_output.html
 
 .DS_Store
 
-.m2/repository
+.envrc

@@ -142,3 +142,4 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 export PATH="/opt/homebrew/opt/postgresql@10/bin:$PATH"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+eval "$(direnv hook zsh)"
