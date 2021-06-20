@@ -15,7 +15,7 @@ Plugin 'VundleVim/Vundle.vim'
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
-Plugin 'jpo/vim-railscasts-theme'
+Plugin 'dracula/vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -58,5 +58,5 @@ set undolevels=1000
 set backspace=indent,eol,start
 set rtp+=/usr/local/opt/fzf
 syntax on
-colorscheme railscasts
+colorscheme dracula
 set clipboard=unnamed

@@ -17,6 +17,7 @@
 [core]
   excludesfile = ~/.gitignore_global
   autocrlf = input
+  ignorecase = false
 [commit]
   template = ~/.gitmessage
   gpgsign = true
