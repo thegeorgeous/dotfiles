@@ -74,16 +74,12 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# path for ctags
-export PATH="/usr/local/bin:$PATH"
-
 # path for rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 
 
-export PATH="/usr/local/sbin:$PATH"
 export PATH="$HOME/.emacs.d/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 
@@ -127,7 +123,7 @@ alias ec="emacsclient -n"
 alias bubu="brew update && brew upgrade && brew outdated && brew cleanup"
 
 # Standard ML
-export PATH=/usr/local/smlnj/bin:"$PATH"
+export PATH="/usr/local/smlnj/bin:$PATH"
 alias sml="rlwrap sml"
 
 export LDFLAGS="-L/opt/homebrew/opt/libffi/lib"
