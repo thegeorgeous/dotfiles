@@ -8,7 +8,6 @@
 
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;(package! some-package)
-(package! protobuf-mode)
 (package! feature-mode)
 
 ;; To install a package directly from a remote git repo, you must specify a
