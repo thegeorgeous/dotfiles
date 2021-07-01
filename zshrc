@@ -122,6 +122,9 @@ alias reload="source ~/.zshrc"
 alias ec="emacsclient -n"
 alias bubu="brew update && brew upgrade && brew outdated && brew cleanup"
 
+# Emacs
+export PATH="/opt/homebrew/bin/emacs:$PATH"
+
 # Standard ML
 export PATH="/usr/local/smlnj/bin:$PATH"
 alias sml="rlwrap sml"
