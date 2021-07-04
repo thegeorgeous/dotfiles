@@ -100,6 +100,5 @@
        :desc "regexp" "r" #'query-replace-regexp)
       (:prefix-map ("a" . "avy-goto")
        :desc "char" "c" #'avy-goto-char
-       :desc "char in line" "l" #'avy-goto-char-in-line
-       :desc "swiper" "s" #'swiper-avy)
+       :desc "char in line" "l" #'avy-goto-char-in-line)
 )
