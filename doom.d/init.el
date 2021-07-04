@@ -39,7 +39,7 @@
        ;;neotree           ; a project drawer, like NERDTree for vim
        ophints           ; highlight the region an operation acts on
        (popup +defaults)   ; tame sudden yet inevitable temporary windows
-       ligatures         ; ligatures or substitute text with pretty symbols
+       (ligatures +fira)         ; ligatures or substitute text with pretty symbols
        ;;tabs              ; a tab bar for Emacs
        treemacs          ; a project drawer, like neotree but cooler
        unicode           ; extended unicode support for various languages
@@ -92,7 +92,6 @@
        ;;gist              ; interacting with github gists
        lookup              ; navigate your code and its documentation
        lsp
-       ;;macos             ; MacOS-specific commands
        (magit +forge)             ; a git porcelain for Emacs
        ;;make              ; run make tasks from Emacs
        ;;pass              ; password manager for nerds
@@ -105,10 +104,12 @@
        ;;upload            ; map local to remote projects via ssh/ftp
 
        :os
+       (:if IS-MAC macos)  ; improve compatibility with macOS
        ;;tty               ; improve the terminal Emacs experience
 
        :lang
        ;;agda              ; types of types of types of types...
+       ;;beancount         ; mind the GAAP
        ;;cc                ; C/C++/Obj-C madness
        ;;clojure           ; java with a lisp
        ;;common-lisp       ; if you've seen one lisp, you've seen them all
@@ -131,7 +132,7 @@
        ;;hy                ; readability of scheme w/ speed of python
        ;;idris             ;
        json              ; At least it ain't XML
-       ;;(java +lsp)       ; the poster child for carpal tunnel syndrome
+       java              ; the poster child for carpal tunnel syndrome
        (javascript +lsp)      ; all(hope(abandon(ye(who(enter(here))))))
        ;;julia             ; a better, faster MATLAB
        ;;kotlin            ; a better, slicker Java(Script)
@@ -165,6 +166,7 @@
        ;;terra             ; Earth and Moon in alignment for performance.
        web               ; the tubes
        yaml              ; JSON, but readable
+       ;;zig               ; C, but simpler
 
        :email
        ;;(mu4e +gmail)
