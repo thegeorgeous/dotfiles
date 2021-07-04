@@ -129,9 +129,10 @@ export PATH="/opt/homebrew/bin/emacs:$PATH"
 export PATH="/usr/local/smlnj/bin:$PATH"
 alias sml="rlwrap sml"
 
-export LDFLAGS="-L/opt/homebrew/opt/libffi/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/libffi/include"
-export PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig"
+# Commenting to fix gitea installation
+# export LDFLAGS="-L/opt/homebrew/opt/libffi/lib"
+# export CPPFLAGS="-I/opt/homebrew/opt/libffi/include"
+# export PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig"
 
 # PostgreSQL
 export PATH="/usr/local/opt/libpq/bin:$PATH"
@@ -140,8 +141,8 @@ export PATH="/opt/homebrew/opt/postgresql@11/bin:$PATH"
 # NodeJS
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
-eval "$(direnv hook zsh)"
+export PATH="$HOME/.yarn/bin:$PATH"
+export PATH="$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 
+eval "$(direnv hook zsh)"
