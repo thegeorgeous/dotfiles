@@ -90,3 +90,12 @@
 
 (setq-default line-spacing 0.3)
 (setq projectile-kill-buffers-filter 'kill-all)
+
+(map! :leader
+      (:prefix-map ("i" . "insert")
+       :desc "parentheses"  "p"   #'insert-parentheses
+       )
+      (:prefix-map ("r" . "replace")
+       :desc "query"  "q" #'query-replace
+       :desc "regexp" "r" #'query-replace-regexp)
+)
