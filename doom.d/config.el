@@ -93,12 +93,10 @@
 
 (map! :leader
       (:prefix-map ("i" . "insert")
-       :desc "parentheses"  "p"   #'insert-parentheses
-       )
+       :desc "parentheses"  "p"   #'insert-parentheses)
       (:prefix-map ("r" . "replace")
        :desc "query"  "q" #'query-replace
        :desc "regexp" "r" #'query-replace-regexp)
-      (:prefix-map ("a" . "avy-goto")
-       :desc "char" "c" #'avy-goto-char
-       :desc "char in line" "l" #'avy-goto-char-in-line)
+      (:prefix-map ("s" . "search")
+       :desc "char" "a" #'avy-goto-char)
 )
