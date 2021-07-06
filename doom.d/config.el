@@ -85,8 +85,8 @@
                                "[/\\\\]\\.m2/repository\\"))
 ;; Show the fill column indicator when writing code
 (add-hook! (text-mode prog-mode conf-mode) 'display-fill-column-indicator-mode)
-(setq doom-modeline-env-ruby-executable "Users/thegeorgeous/.rbenv/shims/ruby")
-(setq flycheck-ruby-executable "Users/thegeorgeous/.rbenv/shims/ruby")
+(setq doom-modeline-env-ruby-executable "Users/georgethomas/.rbenv/shims/ruby")
+(setq flycheck-ruby-executable "Users/georgethomas/.rbenv/shims/ruby")
 
 (setq-default line-spacing 0.3)
 (setq projectile-kill-buffers-filter 'kill-all)
