@@ -93,7 +93,10 @@
 
 (map! :leader
       (:prefix-map ("i" . "insert")
-       :desc "parentheses"  "p"   #'insert-parentheses)
+       (:prefix-map ("p" . "parentheses")
+        :desc "round" "r" #'sp-wrap-round
+        :desc "curly" "c" #'sp-wrap-curly
+        :desc "square" "s" #'sp-wrap-square))
       (:prefix-map ("r" . "replace")
        :desc "query"  "q" #'query-replace
        :desc "regexp" "r" #'query-replace-regexp)
