@@ -120,6 +120,7 @@ export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 
 # Emacs
 export PATH="/opt/homebrew/bin/emacs:$PATH"
+export PATH="$HOME/.emacs.d/bin:$PATH"
 
 # Postgres
 export PATH="/opt/homebrew/opt/postgresql@11/bin:$PATH"
@@ -134,3 +135,6 @@ export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
 export PATH="$HOME/.local/bin:$PATH"
+
+#go
+export PATH="$HOME/go/bin:$PATH"

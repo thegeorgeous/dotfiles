@@ -55,6 +55,9 @@
 
 ;; Toggle fullscreen on start
 (toggle-frame-fullscreen)
+(setq gc-cons-threshold 100000000)
+(setq read-process-output-max (* 1024 1024)) ;; 1mb
+(setq delete-by-moving-to-trash 'nil)
 
 (setq lsp-file-watch-ignored `("[/\\\\]\\.git\\'"
                                "[/\\\\]\\.hg\\'"
@@ -92,11 +95,6 @@
 (setq projectile-kill-buffers-filter 'kill-all)
 
 (map! :leader
-      (:prefix-map ("i" . "insert")
-       (:prefix-map ("p" . "parentheses")
-        :desc "round" "r" #'sp-wrap-round
-        :desc "curly" "c" #'sp-wrap-curly
-        :desc "square" "s" #'sp-wrap-square))
       (:prefix-map ("r" . "replace")
        :desc "query"  "q" #'query-replace
        :desc "regexp" "r" #'query-replace-regexp)

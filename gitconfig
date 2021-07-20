@@ -1,8 +1,8 @@
 [include]
   path = ~/private/.gitconfig
 [user]
-	name = George Thomas
-	email = iamgeorgethomas@gmail.com
+  name = George Thomas
+  email = iamgeorgethomas@gmail.com
 [pull]
   rebase = true
 [push]
@@ -18,11 +18,12 @@
   excludesfile = ~/.gitignore_global
   autocrlf = input
   ignorecase = false
+  quotePath = false
+  commitGraph = true
 [commit]
-  template = ~/.gitmessage
   gpgsign = true
 [url "git@github.com:"]
-	insteadOf = gh:
+  insteadOf = gh:
 [url "git@gitlab.com:thegeorgeous/"]
   insteadOf = gl:thegeorgeous/
 [color]
@@ -37,3 +38,7 @@
   process = git-lfs filter-process
 [gpg]
   program = /usr/local/MacGPG2/bin/gpg
+[receive]
+	advertisePushOptions = true
+[gc]
+	writeCommitGraph = true
