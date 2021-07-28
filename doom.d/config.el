@@ -55,9 +55,11 @@
 
 ;; Toggle fullscreen on start
 (toggle-frame-fullscreen)
-(setq gc-cons-threshold 100000000)
+(setq gc-cons-threshold 200000000)
 (setq read-process-output-max (* 1024 1024)) ;; 1mb
 (setq delete-by-moving-to-trash 'nil)
+(setq-default lsp-idle-delay 0.500)
+(setq-default lsp-log-io nil)
 
 (setq lsp-file-watch-ignored `("[/\\\\]\\.git\\'"
                                "[/\\\\]\\.hg\\'"
@@ -86,13 +88,15 @@
                                "[/\\\\]bin/Debug\\'"
                                "[/\\\\]obj\\'"
                                "[/\\\\]\\.m2/repository\\"))
+
 ;; Show the fill column indicator when writing code
 (add-hook! (text-mode prog-mode conf-mode) 'display-fill-column-indicator-mode)
-(setq doom-modeline-env-ruby-executable "Users/georgethomas/.rbenv/shims/ruby")
-(setq flycheck-ruby-executable "Users/georgethomas/.rbenv/shims/ruby")
+(setq-default doom-modeline-env-ruby-executable "Users/georgethomas/.rbenv/shims/ruby")
+(setq-default flycheck-ruby-executable "Users/georgethomas/.rbenv/shims/ruby")
+
 
 (setq-default line-spacing 0.3)
-(setq projectile-kill-buffers-filter 'kill-all)
+(setq-default projectile-kill-buffers-filter 'kill-all)
 
 (map! :leader
       (:prefix-map ("r" . "replace")
