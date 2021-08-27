@@ -19,7 +19,7 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
-(setq doom-font (font-spec :family "Fira Code" :size 16 :weight 'regular)
+(setq doom-font (font-spec :family "Fira Code" :size 18 :weight 'regular)
       doom-variable-pitch-font (font-spec :family "Fira Code" :size 13))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
@@ -58,6 +58,7 @@
 (setq gc-cons-threshold 200000000)
 (setq read-process-output-max (* 1024 1024)) ;; 1mb
 (setq delete-by-moving-to-trash 'nil)
+(setq-default magit-delete-by-moving-to-trash 'nil)
 (setq-default lsp-idle-delay 0.500)
 (setq-default lsp-log-io nil)
 
@@ -93,6 +94,7 @@
 (add-hook! (text-mode prog-mode conf-mode) 'display-fill-column-indicator-mode)
 (setq-default doom-modeline-env-ruby-executable "Users/georgethomas/.rbenv/shims/ruby")
 (setq-default flycheck-ruby-executable "Users/georgethomas/.rbenv/shims/ruby")
+(setq-default rspec-use-spring-when-possible t)
 
 
 (setq-default line-spacing 0.3)
