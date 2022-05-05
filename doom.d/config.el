@@ -94,6 +94,7 @@
 (add-hook! (text-mode prog-mode conf-mode) 'display-fill-column-indicator-mode)
 (setq-default doom-modeline-env-ruby-executable "Users/georgethomas/.rbenv/shims/ruby")
 (setq-default flycheck-ruby-executable "Users/georgethomas/.rbenv/shims/ruby")
+(setq-default flycheck-ruby-rubocop-executable "Users/georgethomas/.rbenv/shims/rubocop")
 (setq-default rspec-use-spring-when-possible t)
 
 
