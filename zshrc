@@ -90,7 +90,7 @@ unsetopt nomatch
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-export EDITOR='vim'
+export EDITOR='nvim'
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
@@ -112,6 +112,7 @@ export EDITOR='vim'
 alias reload="source ~/.zshrc"
 alias ec="emacsclient -n"
 alias bubu="brew update && brew upgrade && brew outdated && brew cleanup"
+# alias docker=podman
 
 # path for rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -138,3 +139,13 @@ export PATH="$HOME/.local/bin:$PATH"
 
 #go
 export PATH="$HOME/go/bin:$PATH"
+export GOBIN=$HOME/go/bin
+
+export PATH="$HOME/Workspace/git-sizer-1.4.0-darwin-arm64/:$PATH"
+export PATH="$HOME/bin/:$PATH"
+
+
+eval "$(pyenv init -)"
+
+# direnv
+eval "$(direnv hook zsh)"
