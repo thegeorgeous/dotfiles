@@ -8,7 +8,7 @@ export ZSH="/Users/georgethomas/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="dracula"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -90,7 +90,7 @@ unsetopt nomatch
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-export EDITOR='nvim'
+export EDITOR='vim'
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
@@ -121,7 +121,7 @@ export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 
 # Emacs
 export PATH="/opt/homebrew/bin/emacs:$PATH"
-export PATH="$HOME/.emacs.d/bin:$PATH"
+export PATH="$HOME/.config/emacs/bin:$PATH"
 
 # Postgres
 export PATH="/opt/homebrew/opt/postgresql@11/bin:$PATH"
@@ -141,11 +141,15 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 export GOBIN=$HOME/go/bin
 
-export PATH="$HOME/Workspace/git-sizer-1.4.0-darwin-arm64/:$PATH"
 export PATH="$HOME/bin/:$PATH"
 
 
-eval "$(pyenv init -)"
+# eval "$(pyenv init -)"
 
 # direnv
 eval "$(direnv hook zsh)"
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+export PATH="$HOME/Workspace/elixir-ls/:$PATH"
