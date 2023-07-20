@@ -153,3 +153,5 @@ command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 export PATH="$HOME/Workspace/elixir-ls/:$PATH"
+
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
