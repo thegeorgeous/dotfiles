@@ -14,10 +14,6 @@ mcd() {
   cd $1
 }
 
-welabrun() {
-    mvn spring-boot:run -Dspring-boot.run.profiles=local -s ./.m2/settings.xml -Dmaven.repo.local=./.m2/repository
-}
-
 commit() {
   git add --all &&  git commit -m $1 && git push origin $(git_current_branch)
 }
