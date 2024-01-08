@@ -124,7 +124,7 @@ export PATH="/opt/homebrew/bin/emacs:$PATH"
 export PATH="$HOME/.config/emacs/bin:$PATH"
 
 # Postgres
-export PATH="/opt/homebrew/opt/postgresql@11/bin:$PATH"
+export PATH="/opt/homebrew/opt/postgresql@13/bin:$PATH"
 
 # Needed to install ruby
 export LDFLAGS="-L/opt/homebrew/opt/libffi/lib"
@@ -148,10 +148,18 @@ export PATH="$HOME/bin/:$PATH"
 
 # direnv
 eval "$(direnv hook zsh)"
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# export PYENV_ROOT="$HOME/.pyenv"
+# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
 
 export PATH="$HOME/Workspace/elixir-ls/:$PATH"
 
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+# pnpm
+export PNPM_HOME="/Users/georgethomas/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
