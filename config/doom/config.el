@@ -99,3 +99,5 @@
 
 (with-eval-after-load 'eglot
  (add-to-list 'eglot-server-programs '((ruby-mode ruby-ts-mode) "ruby-lsp")))
+
+(setq doom-modeline-buffer-file-name-style 'truncate-with-project)
