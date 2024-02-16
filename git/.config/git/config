@@ -1,5 +1,5 @@
 [include]
-  path = ~/private/.gitconfig
+  path = ~/.config/private/.gitconfig
 [user]
   name = George Thomas
   email = iamgeorgethomas@gmail.com
@@ -10,12 +10,15 @@
 [rebase]
   autosquash = true
   autostash = true
+[fetch]
+  prune = true
+  pruneTags = true
 [github]
   user = thegeorgeous
 [rerere]
   enabled = true
 [core]
-  excludesfile = ~/.gitignore_global
+  excludesfile = ~/.config/git/gitignore_global
   autocrlf = input
   ignorecase = false
   quotePath = false
