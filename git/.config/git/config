@@ -1,8 +1,5 @@
 [include]
   path = ~/.config/private/.gitconfig
-[user]
-  name = George Thomas
-  email = iamgeorgethomas@gmail.com
 [pull]
   rebase = true
 [push]
@@ -33,7 +30,6 @@
   ui = true
 [http]
   postBuffer = 1048576000
-
 [filter "lfs"]
   required = true
   clean = git-lfs clean -- %f
