@@ -5,22 +5,13 @@
 [![forthebadge](https://forthebadge.com/images/badges/works-on-my-machine.svg)](https://forthebadge.com)
 
 
-~~Currently managed with [rcm](https://github.com/thoughtbot/rcm)~~
-Migrating to [GNU Stow](https://www.gnu.org/software/stow/)
+Currently managed with [GNU Stow](https://www.gnu.org/software/stow/)
 
-Why stow?
+### Why stow?
 Stow allows for per package installation that I plan to automate at some point. And perhaps make it interactive
 
-
 ## How to install
-~~Ensure rcm is installed. Then run~~
-``` shell
-$ git clone git@github.com:thegeorgeous/dotfiles.git ~/.dotfiles
-
-$ env RCRC=$HOME/.dotfiles/rcrc rcup
-```
-
-Ensure stow is installed. Then run
+Ensure GNU Stow is installed. Then run
 
 ```shell
 git clone git@github.com:thegeorgeous/dotfiles.git ~/.dotfiles
