@@ -126,6 +126,12 @@ export PATH="$HOME/.config/emacs/bin:$PATH"
 # Postgres
 export PATH="/opt/homebrew/opt/postgresql@13/bin:$PATH"
 
+# MySQL
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/mysql-client/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/mysql-client/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/mysql-client/lib/pkgconfig"
+
 # Needed to install ruby
 # export LDFLAGS="-L/opt/homebrew/opt/libffi/lib"
 # export CPPFLAGS="-I/opt/homebrew/opt/libffi/include"
