@@ -1,3 +1,5 @@
+import = ["~/.config/alacritty/themes/themes/gruvbox_dark.toml"]
+
 [window]
 startup_mode = "Fullscreen"
 padding = { x = 10, y = 10 }
