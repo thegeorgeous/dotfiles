@@ -125,6 +125,7 @@ export PATH="$HOME/.config/emacs/bin:$PATH"
 
 # Postgres
 export PATH="/opt/homebrew/opt/postgresql@13/bin:$PATH"
+export PGGSSENCMODE="disable"
 
 # MySQL
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
