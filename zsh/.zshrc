@@ -117,7 +117,7 @@ alias bubu="brew update && brew upgrade && brew outdated && brew cleanup"
 # path for rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
-export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@3)"
 
 # Emacs
 export PATH="/opt/homebrew/bin/emacs:$PATH"
