@@ -104,3 +104,5 @@
 
 (after! ruby-mode
   (set-company-backend! 'ruby-mode))
+
+(add-hook 'eglot-managed-mode-hook #'eldoc-box-hover-at-point-mode t)
