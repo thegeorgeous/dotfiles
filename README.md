@@ -18,3 +18,10 @@ git clone git@github.com:thegeorgeous/dotfiles.git ~/.dotfiles
 cd .dotfiles
 stow <package-name-here> 
 ```
+
+## Emacs setup
+For tree-sitter mode to work correctly, the language grammar needs to be installed.
+
+<kbd>M-x</kbd> `treesit-install-language-grammar`
+
+Without the language grammar, code-completion via eglot may not work correctly
