@@ -128,10 +128,16 @@ export PATH="/opt/homebrew/opt/postgresql@13/bin:$PATH"
 export PGGSSENCMODE="disable"
 
 # MySQL
-export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
-export LDFLAGS="-L/opt/homebrew/opt/mysql-client/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/mysql-client/include"
-export PKG_CONFIG_PATH="/opt/homebrew/opt/mysql-client/lib/pkgconfig"
+# export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+# export LDFLAGS="-L/opt/homebrew/opt/mysql-client/lib"
+# export CPPFLAGS="-I/opt/homebrew/opt/mysql-client/include"
+# export PKG_CONFIG_PATH="/opt/homebrew/opt/mysql-client/lib/pkgconfig"
+
+export PATH="$HOME/.cargo/bin:$PATH"
+
+if [ -d "$(brew --prefix)/opt/grep/libexec/gnubin" ]; then
+    PATH="$(brew --prefix)/opt/grep/libexec/gnubin:$PATH"
+fi
 
 # Needed to install ruby
 # export LDFLAGS="-L/opt/homebrew/opt/libffi/lib"
