@@ -7,6 +7,7 @@ brew "cmake"
 brew "ripgrep"
 tap d12frosted/emacs-plus
 brew install emacs-plus, args: [with-modern-black-dragon-icon]
+brew "k9s"
 
 cask "alfred"
 cask "docker"
