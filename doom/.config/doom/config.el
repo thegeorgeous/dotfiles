@@ -75,8 +75,7 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-;; Toggle fullscreen on start
-(toggle-frame-fullscreen)
+(toggle-frame-maximized)
 (setq-default line-spacing 0.3)
 (display-time)
 (setq-default display-time-24hr-format t)
@@ -89,7 +88,7 @@
 (setq-default flycheck-ruby-rubocop-executable "/Users/georgethomas/.rbenv/shims/rubocop")
 
 (setq flycheck-eglot-exclusive nil)
-(setq ns-right-alternate-modifier nil)   ;; Act as AltGR, for "|"
+(setq ns-right-alternate-modifier nil)   ;; Act as AltGR, for "|" to work with DE keyboards
 
 (add-hook 'treemacs-mode-hook '(lambda ()
                           (setq buffer-face-mode-face '(:family "Fira Sans" :height 7))
