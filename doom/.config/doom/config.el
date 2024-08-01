@@ -99,6 +99,12 @@
 ;; (with-eval-after-load 'eglot
 ;;  (add-to-list 'eglot-server-programs '((ruby-mode ruby-ts-mode) "ruby-lsp")))
 
+(after! lsp-mode
+  (add-to-list 'lsp-language-id-configuration '(ruby-mode . "ruby"))
+  (lsp-register-client
+   (make-lsp-client :new-connection (lsp-stdio-connection "ruby-lsp")
+                    :major-modes '(ruby-mode ruby-ts-mode)
+                    :server-id 'ruby-lsp)))
 (setq doom-modeline-buffer-file-name-style 'truncate-with-project)
 
 (after! ruby-mode
