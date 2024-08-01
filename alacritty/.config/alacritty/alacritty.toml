@@ -5,5 +5,6 @@ startup_mode = "Fullscreen"
 padding = { x = 10, y = 10 }
 
 [font]
-normal = { family = "Fira Code", style = "Retina" }
+normal = { family = "FiraCode Nerd Font", style = "Retina" }
 size = 16
+offset = { x = 0, y = 4 }
