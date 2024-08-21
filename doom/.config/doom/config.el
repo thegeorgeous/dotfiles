@@ -83,9 +83,9 @@
 (setq-default magit-delete-by-moving-to-trash 'nil)
 (add-hook! (text-mode prog-mode conf-mode) 'display-fill-column-indicator-mode)
 
-(setq-default doom-modeline-env-ruby-executable "/Users/georgethomas/.rbenv/shims/ruby")
-(setq-default flycheck-ruby-executable "/Users/georgethomas/.rbenv/shims/ruby")
-(setq-default flycheck-ruby-rubocop-executable "/Users/georgethomas/.rbenv/shims/rubocop")
+(setq-default doom-modeline-env-ruby-executable "/Users/georgethomas/.asdf/shims/ruby")
+(setq-default flycheck-ruby-executable "/Users/georgethomas/.asdf/shims/ruby")
+(setq-default flycheck-ruby-rubocop-executable "/Users/georgethomas/.asdf/shims/rubocop")
 
 (setq flycheck-eglot-exclusive nil)
 (setq ns-right-alternate-modifier nil)   ;; Act as AltGR, for "|" to work with DE keyboards
