@@ -32,7 +32,8 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-nord-aurora)
+(setq doom-theme 'catppuccin)
+(setq catppuccin-flavor 'frappe)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -87,14 +88,14 @@
 (setq-default flycheck-ruby-executable "/Users/georgethomas/.asdf/shims/ruby")
 (setq-default flycheck-ruby-rubocop-executable "/Users/georgethomas/.asdf/shims/rubocop")
 
-(setq flycheck-eglot-exclusive nil)
-(setq ns-right-alternate-modifier nil)   ;; Act as AltGR, for "|" to work with DE keyboards
+;; (setq flycheck-eglot-exclusive nil)
+;; (setq ns-right-alternate-modifier nil)   ;; Act as AltGR, for "|" to work with DE keyboards
 
-(add-hook 'treemacs-mode-hook '(lambda ()
-                          (setq buffer-face-mode-face '(:family "Fira Sans" :height 7))
-                          (buffer-face-mode)))
-(add-hook 'elixir-mode-hook
-          (lambda () (add-hook 'before-save-hook 'elixir-format nil t)))
+;; (add-hook 'treemacs-mode-hook '(lambda ()
+;;                           (setq buffer-face-mode-face '(:family "Fira Sans" :height 7))
+;;                           (buffer-face-mode)))
+;; (add-hook 'elixir-mode-hook
+;;           (lambda () (add-hook 'before-save-hook 'elixir-format nil t)))
 
 ;; (with-eval-after-load 'eglot
 ;;  (add-to-list 'eglot-server-programs '((ruby-mode ruby-ts-mode) "ruby-lsp")))
@@ -105,9 +106,17 @@
    (make-lsp-client :new-connection (lsp-stdio-connection "ruby-lsp")
                     :major-modes '(ruby-mode ruby-ts-mode)
                     :server-id 'ruby-lsp)))
-(setq doom-modeline-buffer-file-name-style 'truncate-with-project)
+
+;; (setq doom-modeline-buffer-file-name-style 'truncate-with-project)
 
 (after! ruby-mode
   (set-company-backend! 'ruby-mode))
 
-(add-hook 'eglot-managed-mode-hook #'eldoc-box-hover-at-point-mode t)
+;;(add-hook 'eglot-managed-mode-hook #'eldoc-box-hover-at-point-mode t)
+(add-hook 'lsp-mode-hook #'eldoc-box-hover-at-point-mode t)
+(setq doom-modeline-github t)
+(setq doom-modeline-icon t)
+(setq doom-modeline-major-mode-icon t)
+(setq doom-modeline-total-line-number t)
+(setq doom-modeline-vcs-max-length 15)
+(setq doom-modeline-vcs-display-function #'doom-modeline-vcs-name)
