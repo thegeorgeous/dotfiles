@@ -1,0 +1,17 @@
+# Load Prezto
+
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+export EDITOR=nvim
+
+# Initialize zsh addons
+eval "$(starship init zsh)"
+eval "$(mise activate zsh)"
+source <(fzf --zsh)
+
+# Shortcuts to manage zsh changes
+alias reload='source ~/.config/zsh/.zshrc'
+alias zshconf='nvim ~/.config/zsh/.zshrc'
+

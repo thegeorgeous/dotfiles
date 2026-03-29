@@ -1,0 +1,41 @@
+[include]
+  path = ~/.config/git/private-config
+[pull]
+  rebase = true
+[push]
+  default = current
+[rebase]
+  autosquash = true
+  autostash = true
+[fetch]
+  prune = true
+  pruneTags = true
+[github]
+  user = thegeorgeous
+[rerere]
+  enabled = true
+[core]
+  excludesfile = ~/.config/git/gitignore_global
+  autocrlf = input
+  ignorecase = false
+  quotePath = false
+  commitGraph = true
+[commit]
+  gpgsign = true
+[color]
+  ui = true
+[http]
+  postBuffer = 1048576000
+[filter "lfs"]
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+[receive]
+	advertisePushOptions = true
+[gc]
+	writeCommitGraph = true
+[init]
+	defaultBranch = main
+[url "git@github.com:"]
+  insteadOf = "gh:"
