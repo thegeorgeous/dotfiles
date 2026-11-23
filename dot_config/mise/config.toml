@@ -1,0 +1,7 @@
+[tools]
+bun = "latest"
+go = "latest"
+node = "latest"
+ruby = "4.0.7"
+rust = "stable"
+uv = "latest"

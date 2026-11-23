@@ -1,0 +1,2 @@
+export ZDOTDIR="$HOME/.config/zsh"
+export RTK_TELEMETRY_DISABLED=1

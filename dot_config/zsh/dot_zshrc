@@ -4,7 +4,10 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+source "${ZDOTDIR:-$HOME}/git-ohmyzsh-prezto.zsh"
+
 export EDITOR=nvim
+export GPG_TTY=$(tty)
 
 # Initialize zsh addons
 eval "$(starship init zsh)"
@@ -15,3 +18,6 @@ source <(fzf --zsh)
 alias reload='source ~/.config/zsh/.zshrc'
 alias zshconf='nvim ~/.config/zsh/.zshrc'
 
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/opt/homebrew/sbin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
